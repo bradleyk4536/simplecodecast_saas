@@ -1,4 +1,4 @@
-class ContactMailer < ActiveMailer::Base
+class ContactMailer < ActionMailer::Base
 	
 	default to: 'k_bnet570@verizon.net'
 	
