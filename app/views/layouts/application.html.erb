@@ -37,6 +37,11 @@
 <!--	End modified navbar from getbootstrap.com-->
 
 	<section class="container">
+<!--		Add flash messaging to application with bootstrap styling-->
+		<% flash.each do |key, value| %>
+		<%= content_tag :div, value, class: "alert alert-#{key}" %>
+		<% end %>
+		
 		<%= yield %>
 	
 	</section>
