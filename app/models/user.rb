@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 	
 #	associate to plan table
 	belongs_to :plan
+	has_one :profile
 	attr_accessor :stripe_card_token
 	def save_with_payment
 #		check to see if inputs are valid on credit card form
