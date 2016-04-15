@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 #		check to see if inputs are valid on credit card form
 		if valid? 
 			#			use stripe gem to send information to stripe server
-			customer = Stripe::Customer.create(description: email, plan: plan_id, card: strip_card_token)
+			customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
 			self.stripe_customer_token = customer.id
 			save!
 			
