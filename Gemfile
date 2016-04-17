@@ -15,6 +15,9 @@ gem 'stripe', '1.41.0'
 
 gem 'figaro', '1.1.1'
 
+#paperclip for file upload
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+
 
 #Use postgresql as the database for production
 group :production do
