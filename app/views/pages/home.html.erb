@@ -9,23 +9,24 @@
 			<div class="col-md-6">
 				<div class="well">
 					<h2 class="text-center">Profile</h2>
-					<% if current_user.profile %>
-					<%= link_to 'Edit Profile', "#", class: 'btn btn-default btn-lg btn-block', method: :get %>
+
+			<% if current_user.profile %>
+					<%= link_to 'Edit Profile', edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block', method: :get %>
 					<%= link_to 'View Profile', user_path(current_user), class: 'btn btn-default btn-lg btn-block', method: :get%>
-					<% else %>
+			<% else %>
 					<p>Create profile so that you can share you information with the community</p>
 					<%= link_to "Create Profile", new_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block', method: :get %>
-					<% end %>
+			<% end %>
 				</div>
 
 			</div>
-		<div class="col-md-6">
-				<div class="well">
-					<h2 class="text-center">The Community</h2>
-					<p>Visit community to view other developer, entrepreneurs and investors</p>
-					<%= link_to "Visit Community", "#", class: 'btn btn-default btn-lg btn-block', method: :get %>
-				</div>
-		</div>
+			<div class="col-md-6">
+					<div class="well">
+						<h2 class="text-center">The Community</h2>
+						<p>Visit community to view other developer, entrepreneurs and investors</p>
+						<%= link_to "Visit Community", "#", class: 'btn btn-default btn-lg btn-block', method: :get %>
+					</div>
+			</div>
 
 		<% else %>
 			<div class="col-md-6">
